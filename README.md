@@ -14,54 +14,73 @@
 
 ---
 
-# 📊 Análise de Dados do Airbnb — Rio de Janeiro
+# 🏖️ Rio Airbnb Market Analytics
 
-Este projeto faz uma análise exploratória simples dos dados do **Airbnb no Rio de Janeiro**, utilizando o dataset público do [Inside Airbnb](https://insideairbnb.com/get-the-data/).
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-150458?style=for-the-badge&logo=pandas)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-11557c?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Concluído-green?style=for-the-badge)
 
-## 🎯 Objetivo
-Atividade acadêmica com foco em:
-- Carregar e tratar dados reais
-- Responder perguntas com base em evidências
-- Gerar gráficos e tabelas em Python (Google Colab)
-
-## 🛠️ Tecnologias usadas
-- Python 3
-- Google Colab
-- Pandas
-- Matplotlib
-- Numpy
-
-## 📂 Dados
-Os dados foram obtidos no site oficial do [Inside Airbnb](https://insideairbnb.com/get-the-data/), snapshot de **24/06/2025** para o **Rio de Janeiro**.
-
-Arquivos utilizados:
-- `listings.csv` → informações gerais dos anúncios  
-- `neighbourhoods.csv` → bairros
-
-## ❓ Perguntas respondidas
-1. Qual é a distribuição de tipos de quarto (*room_type*)?  
-2. Quais os 15 bairros com maior preço mediano?  
-3. Anúncios com *instant_bookable* têm preço diferente?  
-4. Hosts *Superhost* cobram diferente? E têm melhor nota?  
-5. Existe relação entre número de reviews e nota de avaliação?  
-
-## 📊 Resultados principais
-- A maioria dos anúncios são **quartos inteiros/apartamentos**.  
-- **Bairros turísticos (Zona Sul)** têm preços medianos mais altos.  
-- O recurso **instant_bookable** não altera muito o preço.  
-- **Superhosts** apresentam notas de avaliação mais altas, reforçando a importância da experiência oferecida.  
-- O número de reviews não garante notas maiores, mas aumenta a confiança no anúncio.  
-
-## ✅ Conclusão
-A **localização** é o fator mais determinante no preço dos anúncios.  
-Já a **qualidade da experiência** (avaliada por reviews e status de superhost) influencia diretamente a reputação dos anfitriões, mas não necessariamente o valor cobrado.
-
-## ▶️ Como executar
-1. Abra o notebook no **Google Colab**:  
-   - [Abrir no Colab](https://colab.research.google.com/github/SEU-USUARIO/airbnb-analise/blob/main/Airbnb_Rio_Analise_Simples.ipynb)  
-2. Clique em **Executar tudo**.  
-3. Os gráficos e tabelas serão exibidos automaticamente.
+> Uma análise exploratória de dados (EDA) sobre o mercado de aluguel de curta temporada no Rio de Janeiro, focada em estratégias de precificação, distribuição geográfica e impacto da reputação (Superhosts).
 
 ---
 
+## 💼 Visão Geral do Negócio
+
+Este projeto visa auxiliar investidores e anfitriões a entenderem o cenário competitivo do Airbnb no Rio de Janeiro. Utilizando dados reais do portal [Inside Airbnb](http://insideairbnb.com/), respondemos a perguntas cruciais sobre **onde investir** e **como precificar** imóveis.
+
+### Principais Descobertas:
+
+* **Dominância de Mercado:** O mercado carioca é dominado por aluguéis de espaços inteiros (Apartamentos/Casas), indicando um perfil de turismo voltado para privacidade e grupos.
+* **Precificação Geográfica:** A Zona Sul não é apenas turística, é o motor financeiro. Bairros como **Leblon** e **Ipanema** comandam os maiores preços medianos, enquanto oportunidades de entrada existem em regiões adjacentes.
+* **Fator Superhost:** Ser um *Superhost* impacta marginalmente no preço, mas drasticamente na taxa de ocupação implícita (via número de reviews) e na nota média, sugerindo que a qualidade do serviço é um fator de conversão, não apenas de preço.
+
+## 📓 Estrutura da Análise
+
+O projeto foi desenvolvido em **Jupyter Notebook** e aborda as seguintes etapas do pipeline de dados:
+
+1.  **Ingestão de Dados:** Coleta automatizada de dados brutos via URL.
+2.  **Limpeza e Tratamento:**
+    * Tratamento de dados monetários (conversão de strings financeiras).
+    * Remoção de *outliers* de preço (filtragem estatística entre os percentis 1% e 99%).
+    * Seleção de colunas relevantes para a análise.
+3.  **Análise Exploratória (EDA):**
+    * Distribuição de tipos de acomodação.
+    * Ranking de bairros por valor mediano.
+    * Correlação entre avaliações e preço.
+
+## 📊 Visualizações Chave
+
+*(Sugestão: Salve as imagens geradas no notebook e coloque aqui. Exemplo abaixo)*
+
+| Distribuição de Imóveis | Preço por Bairro (Top 15) |
+|:---:|:---:|
+| *[Insira o gráfico de pizza/barra aqui]* | *[Insira o gráfico de barras horizontais aqui]* |
+
+## 🛠️ Como Reproduzir
+
+### Pré-requisitos
+Você precisará de Python 3 e das bibliotecas listadas em `requirements.txt`.
+
+1. **Clone o repositório**
+   ```bash
+   git clone [https://github.com/BeiruthDEV/rio-airbnb-pricing-analytics.git](https://github.com/BeiruthDEV/rio-airbnb-pricing-analytics.git)
+   cd rio-airbnb-pricing-analytics
+---
+
+2. **Instale as dependências
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Execute o Jupyter Notebook
+   ```bash
+   jupyter notebook notebooks/Rio_Market_Analysis.ipynb
+   ```
+
+
+## 📂 Fonte dos Dados
+Os dados utilizados referem-se ao snapshot de 24/06/2025 da cidade do Rio de Janeiro, disponibilizados publicamente pelo Inside Airbnb.
+
+## Autor
+Matheus Beiruth
 
